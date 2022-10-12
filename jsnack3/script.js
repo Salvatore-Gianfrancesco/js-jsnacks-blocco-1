@@ -11,5 +11,10 @@ for (let i = 0; i < 10; i++) {
     sum += num;
 }
 
-console.log("La somma tra i 10 numeri inseriti è: ", sum);
-h1El.innerHTML = `La somma tra i 10 numeri inseriti è: ${sum}`
+if (isNaN(sum)) {
+    console.log("Almeno uno dei valori inseriti non è un numero e la somma non può essere calcolata");
+    h1El.innerHTML = "Almeno uno dei valori inseriti non è un numero e la somma non può essere calcolata";
+} else {
+    console.log("La somma tra i 10 numeri inseriti è: ", sum);
+    h1El.innerHTML = `La somma tra i 10 numeri inseriti è: ${sum}`;
+}
