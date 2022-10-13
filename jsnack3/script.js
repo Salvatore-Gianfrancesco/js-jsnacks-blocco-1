@@ -6,6 +6,8 @@ let sum = 0;
 
 const h1El = document.querySelector("h1");
 
+/* FOR */
+/*
 for (let i = 0; i < 10; i++) {
     num = Number(prompt("Inserisci numero"));
     sum += num;
@@ -18,3 +20,14 @@ if (isNaN(sum)) {
     console.log("La somma tra i 10 numeri inseriti è: ", sum);
     h1El.innerHTML = `La somma tra i 10 numeri inseriti è: ${sum}`;
 }
+*/
+
+/* WHILE */
+let i = 0;
+while (i < 10) {
+    num = Number(prompt("Inserisci numero"));
+    sum += num;
+    i++;
+}
+
+console.log(sum);
