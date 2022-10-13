@@ -25,17 +25,13 @@ if (isNaN(sum)) {
 /* WHILE */
 let i = 0;
 while (i < 10) {
-    num = Number(prompt("Inserisci numero"));
+    do {
+        num = Number(prompt(`Inserisci il valore numero ${i + 1}`));
+        if (isNaN(num)) {
+            alert("Il valore inserito non è un numero... riprova");
+        }
+    } while (isNaN(num))
+
     sum += num;
     i++;
-}
-
-console.log(sum);
-
-if (isNaN(sum)) {
-    console.log("Almeno uno dei valori inseriti non è un numero e la somma non può essere calcolata");
-    h1El.innerHTML = "Almeno uno dei valori inseriti non è un numero e la somma non può essere calcolata";
-} else {
-    console.log("La somma tra i 10 numeri inseriti è: ", sum);
-    h1El.innerHTML = `La somma tra i 10 numeri inseriti è: ${sum}`;
 }
